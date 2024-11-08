@@ -45,4 +45,15 @@ export function addToCart(productId){
         });
         cart=newCart;
         saveToStorage();
+    }
+    
+    export function updateDeliveryOption(productId,deliveryOptionsId){
+        let MatchingItem ;
+        cart.forEach((cartItem) => {
+            if(productId === cartItem.productId){
+                MatchingItem = cartItem;
+            };
+        });
+        MatchingItem.deliveryOptionsId = deliveryOptionsId
+        saveToStorage();
 }
