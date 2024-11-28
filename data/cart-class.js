@@ -1,5 +1,5 @@
 class Cart{
-    cartItems;
+    cartItem;
     localStorageKey;
     constructor(localStorageKey){
     this.localStorageKey =localStorageKey;
